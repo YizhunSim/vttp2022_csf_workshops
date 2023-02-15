@@ -1,0 +1,23 @@
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Games Per Page:</mat-label>
+    <mat-select (selectionChange)="onLimitChange($event)">
+      <mat-option *ngFor="let limit of limitOptions" [value]="limit">{{limit}}</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+</form>
+
+<div class="game-list">
+  <mat-card *ngFor="let game of games">
+    <mat-card-content>{{ game.name }}</mat-card-content>
+  </mat-card>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="button-row">
+  <!-- disable prev button on first page -->
+  <button mat-raised-button (click)="onChangePage(-1)" [disabled]="currentOffset <= 0">Previous</button>
+  <button mat-raised-button (click)="onChangePage(1)">Next</button>
+</div>
