@@ -1,0 +1,10 @@
+<h2>Weather App</h2>
+<form [formGroup]="weatherForm" (ngSubmit)="getWeather()">
+  <mat-form-field appearance="fill">
+    <mat-label>City</mat-label>
+    <input matInput placeholder="City" formControlName="city">
+  </mat-form-field>
+
+  <button type="button" (click)="getWeather()" [disabled]="weatherForm.invalid" mat-raised-button color="primary">Get Weather</button>
+</form>
+
