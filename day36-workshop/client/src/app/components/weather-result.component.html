@@ -1,0 +1,32 @@
+<h2>{{city}}</h2>
+<button mat-raised-button color="primary" [routerLink]="['/']">Back</button>
+
+<mat-card *ngIf="!!weatherResult">
+  <table>
+    <tr>
+      <td>City</td>
+      <td>{{weatherResult.country}}</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>{{weatherResult.description}}</td>
+    </tr>
+    <tr>
+      <td>Temperature</td>
+      <td>{{weatherResult.temp}}</td>
+    </tr>
+    <tr>
+      <td>Humidity</td>
+      <td>{{weatherResult.humidity}}</td>
+    </tr>
+    <tr>
+      <td>WindSpeed</td>
+      <td>{{weatherResult.windSpeed}}</td>
+    </tr>
+    <tr>
+      <td>WindDegree</td>
+      <td>{{weatherResult.windDegree}}</td>
+    </tr>
+  </table>
+</mat-card>
+

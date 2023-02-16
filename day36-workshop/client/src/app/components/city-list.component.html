@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="addCityToLocalStorage()">
+  <mat-form-field class="city-search">
+    <mat-label>City: </mat-label>
+    <input matInput placeholder="City" formControlName="city"/>
+  </mat-form-field>
+  <button mat-raised-button [disabled]="isFormInvalid()">Add</button>
+</form>
+
+<!-- <div *ngIf="cities.length < 1">
+  <p>No Cities</p>
+</div> -->
+
+<!-- <div class="city-list">
+  <mat-card [routerLink]="['weather', city]" *ngFor="let city of cities">
+    <mat-card-content>{{city}}</mat-card-content>
+  </mat-card>
+</div> -->
+
+<div *ngIf="citiesLocalStorage.length < 1">
+  <p>No Cities</p>
+</div>
+
+<div class="city-list">
+  <mat-card [routerLink]="['weather', city.city]" *ngFor="let city of citiesLocalStorage">
+    <mat-card-content>{{city.city}}</mat-card-content>
+  </mat-card>
+</div>
