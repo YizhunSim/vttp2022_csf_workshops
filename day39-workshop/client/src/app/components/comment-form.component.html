@@ -1,0 +1,22 @@
+<h3>Comment - {{characterName}}</h3>
+
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput formControlName="comment"></textarea>
+  </mat-form-field>
+  <div class="comment-buttons">
+    <button type="button" mat-stroked-button (click)="clearForm()">Clear</button>
+    <button
+      type="submit"
+      mat-stroked-button
+      color="primary"
+      [disabled]="form.invalid"
+    >
+      Post Comment
+    </button>
+    <div>
+      <button type="button" mat-stroked-button [routerLink]="['']">Home</button>
+    </div>
+  </div>
+</form>
