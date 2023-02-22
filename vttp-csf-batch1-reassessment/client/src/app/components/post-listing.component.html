@@ -1,0 +1,29 @@
+<div *ngIf="post != null">
+<mat-card class="example-card">
+  <img mat-card-image [src]="post.image">
+</mat-card>
+
+<mat-card>
+  <mat-card-content>Posting Id: {{post.postingid}}</mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>Posting Date: {{post.postingDate}}</mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>Name: {{post.name}}</mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>Email: {{post.email}}</mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>Phone: {{post.phone}}</mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>Title: {{post.title}}</mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>Description: {{post.description}}</mat-card-content>
+</mat-card>
+<button mat-raised-button color="primary" type="button" (click)="cancelForm()">Cancel</button>
+<button mat-raised-button color="primary" type="button" (click)="submitForm()" >Confirm</button>
+</div>
