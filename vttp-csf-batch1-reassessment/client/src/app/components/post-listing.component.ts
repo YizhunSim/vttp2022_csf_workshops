@@ -16,12 +16,12 @@ export class PostListingComponent implements OnInit, OnDestroy {
   postSub$!: Subscription;
 
   constructor(private router: Router, private postSvc: PostService) {
-    this.postSub$ = this.postSvc.onPostCreated.subscribe(result => {
-      this.post = result;
-    })
   }
 
   ngOnInit(): void {
+    this.postSub$ = this.postSvc.onPostCreated.subscribe(result => {
+      this.post = result;
+    })
   }
 
   ngOnDestroy(): void {

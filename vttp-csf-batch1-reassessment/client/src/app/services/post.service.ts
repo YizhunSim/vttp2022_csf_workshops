@@ -10,7 +10,7 @@ import { Post } from '../models';
 export class PostService{
   onPostCreated : Subject<Post> = new Subject<Post>()
 
-  SERVER_ENDPOINT = 'https://stale-move-production.up.railway.app/'
+  SERVER_ENDPOINT = 'https://stale-move-production.up.railway.app'
 
   constructor(private http: HttpClient) {
 
